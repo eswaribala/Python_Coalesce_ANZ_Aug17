@@ -13,16 +13,9 @@ slide = prs.slides.add_slide(title_slide_layout)
 title = slide.shapes.title
 subtitle = slide.placeholders[1]
 
-title.text = "Hello, World!"
-subtitle.text = "python-pptx was here!"
+title.text = "Python Programming!"
+subtitle.text = "Parameswari Ettiappan!"
 
-prs.save('test.pptx')
-
-
-'''
-from pptx import Presentation
-
-prs = Presentation()
 bullet_slide_layout = prs.slide_layouts[1]
 
 slide = prs.slides.add_slide(bullet_slide_layout)
@@ -45,15 +38,14 @@ p.text = 'Use _TextFrame.add_paragraph() for subsequent bullets'
 p.level = 2
 
 
-prs.save('test.pptx')
 
 
 
 from pptx import Presentation
 from pptx.util import Inches, Pt
 
-prs = Presentation()
-blank_slide_layout = prs.slide_layouts[6]
+
+blank_slide_layout = prs.slide_layouts[2]
 slide = prs.slides.add_slide(blank_slide_layout)
 
 left = top = width = height = Inches(1)
@@ -70,15 +62,16 @@ p = tf.add_paragraph()
 p.text = "This is a third paragraph that's big"
 p.font.size = Pt(40)
 
-prs.save('test.pptx')
+
+
+
 
 from pptx import Presentation
 from pptx.util import Inches
 
-img_path = 'monty-truth.png'
+img_path = 'crew.jpg'
 
-prs = Presentation()
-blank_slide_layout = prs.slide_layouts[6]
+blank_slide_layout = prs.slide_layouts[3]
 slide = prs.slides.add_slide(blank_slide_layout)
 
 left = top = Inches(1)
@@ -88,14 +81,15 @@ left = Inches(5)
 height = Inches(5.5)
 pic = slide.shapes.add_picture(img_path, left, top, height=height)
 
-prs.save('test.pptx')
+
+
 
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.util import Inches
 
-prs = Presentation()
-title_only_slide_layout = prs.slide_layouts[5]
+
+title_only_slide_layout = prs.slide_layouts[4]
 slide = prs.slides.add_slide(title_only_slide_layout)
 shapes = slide.shapes
 
@@ -117,11 +111,11 @@ for n in range(2, 6):
     shape.text = 'Step %d' % n
     left = left + width - Inches(0.4)
 
-prs.save('test.pptx')
+
+
 from pptx import Presentation
 from pptx.util import Inches
 
-prs = Presentation()
 title_only_slide_layout = prs.slide_layouts[5]
 slide = prs.slides.add_slide(title_only_slide_layout)
 shapes = slide.shapes
@@ -147,6 +141,4 @@ table.cell(0, 1).text = 'Bar'
 table.cell(1, 0).text = 'Baz'
 table.cell(1, 1).text = 'Qux'
 
-prs.save('test.pptx')
-
-'''
+prs.save('Python_Presentation.pptx')
